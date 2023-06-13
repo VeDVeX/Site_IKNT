@@ -1,0 +1,454 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+/* header */
+
+header {
+    /* backdrop-filter: blur(5px); */
+    background-color: white;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    /* background-color: #444 */;
+    justify-content: space-between;
+    position: fixed;
+}
+
+/* logo */
+.logo-holder {
+    display: flex;
+    /* background-color: #848484 */;
+
+    max-height: 100PX;
+    max-width: 500px;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo {
+    padding-left: 100px;
+}
+
+/* nav */
+nav {
+    display: flex;
+    /* background-color: aquamarine */;
+}
+
+.nav__bar {
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    min-width: 900px;
+}
+
+/* buttons */
+.aaa {
+    font-size: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* main */
+
+main {
+    display: flex;
+
+    height: 100vh;
+  
+    /* background-color: aquamarine; */
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    display: flex;
+
+    /*background-color: blanchedalmond;*/
+
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+	
+}
+
+.header_background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: -4;
+}
+
+
+.heading-subtitle {
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 100;
+    color: #484848;
+
+    width: 600px;
+    padding: 20px;
+}
+
+.heading-maintitle {
+    text-align: center;
+    font-size: 55px;
+    padding: 20px;
+}
+
+.heading-button {
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 1.2rem 2.5rem;
+    border-width: 0px;
+    border-radius: 30px;
+    cursor: default;
+}
+
+.heading-button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 12px #000;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+
+/* section about high scool */
+
+.about-hs {
+    display: flex;
+
+    flex-basis: 50rem;
+    padding: 5rem;
+
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.hs-bar {
+    display: flex;
+
+    flex-basis: 100rem;
+
+    border: solid #000;
+    border-width: 1px;
+    border-radius: 100px;
+    opacity: 100%;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/*High scool titles*/
+.hs-title {
+    display: flex;
+    max-width: 500px;
+    max-height: 100px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hs-maintitle {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hs-subtitle {
+    font-size: 20px;
+    color: #484848;
+}
+
+/*High scool units*/
+.hs-units {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 10px;
+    justify-content: center;
+    align-items: start;
+}
+
+.hs-unit {
+    display: flex;
+    min-width: 400px;
+    max-width: 400px; /* если здесь написать просто "width: 400px" то работать не будет, я хз почему */
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+
+}
+
+.ns-unit-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unit-icon-inner {
+    max-width: 40px;
+}
+
+.hs-unit-title {
+    min-width: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin: 10px 0px;
+
+}
+
+.hs-unit-subtitle {
+    min-width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #484848;
+}
+
+
+/*About teach*/
+
+.about-teach {
+    display: flex;
+
+    flex-basis: 50rem;
+    padding: 5rem;
+
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.teach-bar {
+    display: flex;
+
+    flex-basis: 100rem;
+
+    border: solid #000;
+    border-width: 1px;
+    border-radius: 100px;
+    opacity: 100%;
+
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teach-title {
+    display: flex;
+    max-width: 700px;
+    max-height: 100px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teach-maintitle {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.teach-subtitle {
+    font-size: 20px;
+    color: #484848;
+}
+
+/* faq */
+
+.faq {
+    display: flex;
+    flex-basis: 100rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.faq-item {
+    display: flex;
+    flex-basis: 100rem;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-title {
+    display: flex;
+    min-width: 900px;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+
+.faq-title:hover {
+    box-shadow: 0 0 12px #000;
+    transition: .2s ease-out;
+}
+
+.faq-input {
+    width: 0px;
+    height: 0px;
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.faq-text {
+    display: none;
+    width: 100rem;
+    min-height: 6rem;
+    margin-top: 10px;
+    padding: 0px 10px;
+    transition: 0.2s ease-out;
+    justify-content: center;
+    align-items: start;
+}
+
+.faq-inner-text {
+    max-width: 880px;
+    font-size: 18px;
+    color: #484848;
+}
+
+.faq-input:checked ~ .faq-text {
+    display: flex;
+    transition: 0.2s ease-out;
+}
+
+
+/* campaign-survay */
+.campaign-survay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.survay-maintitle {
+    font-size: 25px;
+}
+
+.survay-subtitle {
+    color: #484848;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    height: 5rem;
+
+    font-size: 20px;
+    color: #484848;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* about teachers */
+
+.about-teachers {
+    display: flex;
+
+    flex-basis: 100rem;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.teachers-maintitle {
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.teachers-subtitle{
+    font-size: 20px;
+    color: #484848;
+}
+
+.teachers-units{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-basis: 100rem;
+    flex-wrap: wrap;
+}
+
+.teacher-unit {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    margin: 40px 20px;
+}
+
+.teacher-icon-inner{
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.teacher-unit-titles {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.teacher-unit-maintitle {
+    font-size: 20px;
+}
+
+.teacher-unit-subtitle {
+    font-size: 18px;
+    color: #484848;
+}
+
+.teach-button {
+    margin-bottom: 30px;
+}
