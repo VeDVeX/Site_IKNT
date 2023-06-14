@@ -187,8 +187,10 @@ main {
 }
 
 .hs-subtitle {
+    text-align: center;
     font-size: 20px;
     color: #484848;
+    min-width: 500px;
 }
 
 /*High scool units*/
