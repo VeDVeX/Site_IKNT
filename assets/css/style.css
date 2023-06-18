@@ -469,7 +469,7 @@ footer {
 }
 
 /* PHONE FORMAT */
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
     header {
         margin: 0;
         width: 100%;
