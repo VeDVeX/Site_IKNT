@@ -468,6 +468,13 @@ footer {
     z-index: -4;
 }
 
+
+@media screen and (max-width: 1350px) { 
+    .teacher_background {
+        display: none;
+    }
+}
+
 /* PHONE FORMAT */
 @media screen and (max-width: 576px) {
     header {
@@ -492,7 +499,7 @@ footer {
     
         /*background-color: blanchedalmond;*/
     
-        max-width: 500px;
+        width: 500px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -501,7 +508,7 @@ footer {
     }
     
     .header_background {
-        height: 200px;
+        flex-basis: 100rem;
         z-index: -4;
     }
 
@@ -514,7 +521,6 @@ footer {
         text-align: center;
     
         font-size: 18px;
-        font-weight: 100;
         color: #484848;
     
         width: 600px;
@@ -553,7 +559,7 @@ footer {
     .about-hs {
         display: flex;
     
-        flex-basis: 50rem;
+        flex-basis: 5rem;
         padding: 5rem;
     
         flex: 1;
@@ -568,7 +574,7 @@ footer {
     
         border: solid #000;
         border-width: 1px;
-        border-radius: 100px;
+        border-radius: 50px;
         opacity: 100%;
     
         justify-content: center;
@@ -580,7 +586,7 @@ footer {
     /*High scool titles*/
     .hs-title {
         display: flex;
-        max-width: 500px;
+        max-width: 400px;
         max-height: 100px;
         margin-top: 20px;
         justify-content: center;
@@ -589,31 +595,30 @@ footer {
     }
     
     .hs-maintitle {
-        font-size: 50px;
-        font-weight: 600;
+        font-size: 30px;
     }
     
     .hs-subtitle {
         text-align: center;
-        font-size: 20px;
+        font-size: 18px;
         color: #484848;
-        min-width: 500px;
+        min-width: 400px;
     }
     
     /*High scool units*/
     .hs-units {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 10px;
+        margin: 15px 10px;
         justify-content: center;
         align-items: start;
     }
     
     .hs-unit {
         display: flex;
-        min-width: 400px;
-        max-width: 400px; /* если здесь написать просто "width: 400px" то работать не будет, я хз почему */
-        margin: 20px;
+        min-width: 300px;
+        max-width: 300px;
+        margin: 15px;
         justify-content: center;
         align-items: center;
         flex: 1;
@@ -628,13 +633,13 @@ footer {
     }
     
     .unit-icon-inner {
-        max-width: 40px;
+        max-width: 35px;
     }
     
     .hs-unit-title {
         min-width: 100%;
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
         margin: 10px 0px;
     
     }
@@ -642,7 +647,7 @@ footer {
     .hs-unit-subtitle {
         min-width: 100%;
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         color: #484848;
     }
     
@@ -653,7 +658,7 @@ footer {
         display: flex;
     
         flex-basis: 50rem;
-        padding: 5rem;
+        padding: 5rem 0rem;
     
         flex: 1;
         justify-content: center;
@@ -663,11 +668,11 @@ footer {
     .teach-bar {
         display: flex;
     
-        flex-basis: 100rem;
+        max-width: 450px;
     
         border: solid #000;
         border-width: 1px;
-        border-radius: 100px;
+        border-radius: 50px;
         opacity: 100%;
     
         justify-content: center;
@@ -677,32 +682,35 @@ footer {
     
     .teach-title {
         display: flex;
-        max-width: 700px;
+        max-width: 450px;
         max-height: 100px;
         margin-top: 20px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+        text-align: center;
     }
     
     .teach-maintitle {
-        font-size: 50px;
+        font-size: 30px;
         font-weight: 600;
+        margin-bottom: 10px;
     }
     
     .teach-subtitle {
-        font-size: 20px;
+        font-size: 18px;
         color: #484848;
+        margin-bottom: 0px;
     }
     
     /* faq */
     
     .faq {
         display: flex;
-        flex-basis: 100rem;
+        flex-basis: 80rem;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 40px;
         flex-wrap: wrap;
     }
@@ -711,20 +719,21 @@ footer {
         display: flex;
         flex-basis: 100rem;
         flex-wrap: wrap;
-        margin-top: 20px;
+        margin-top: 15px;
         justify-content: center;
         align-items: center;
     }
     
     .faq-title {
         display: flex;
-        min-width: 900px;
+        min-width: 300px;
+        max-width: 400px;
         align-items: center;
         cursor: pointer;
         padding: 10px;
         border-radius: 10px;
         position: relative;
-        font-size: 20px;
+        font-size: 15px;
         justify-content: space-between;
     }
     
@@ -744,19 +753,21 @@ footer {
     
     .faq-text {
         display: none;
-        width: 100rem;
+        width: 80rem;
         min-height: 6rem;
         margin-top: 10px;
         padding: 0px 10px;
         transition: 0.2s ease-out;
         justify-content: center;
-        align-items: start;
+        align-items: center;
+        text-align: center;
     }
     
     .faq-inner-text {
-        max-width: 880px;
-        font-size: 18px;
+        max-width: 440px;
+        font-size: 14px;
         color: #484848;
+        padding: 0px 10px;
     }
     
     .faq-input:checked ~ .faq-text {
@@ -772,19 +783,26 @@ footer {
         justify-content: center;
         align-items: center;
         max-width: 500px;
-        margin-top: 20px;
-        margin-bottom: 50px;
+        margin-top: 18px;
+        margin-bottom: 30px;
     }
     
     .survay-maintitle {
-        font-size: 25px;
+        font-size: 20px;
     }
     
     .survay-subtitle {
         color: #484848;
-        font-size: 20px;
+        font-size: 16px;
         margin-top: 10px;
         margin-bottom: 30px;
+    }
+
+
+    .teach-button1 {
+        font-size: 16px;
+        padding: 12px 15px;
+        margin: 0px;
     }
     
     /* footer */
@@ -811,12 +829,12 @@ footer {
     }
     
     .teachers-maintitle {
-        font-size: 42px;
+        font-size: 30px;
         font-weight: 600;
     }
     
     .teachers-subtitle{
-        font-size: 20px;
+        font-size: 18px;
         color: #484848;
     }
     
@@ -827,6 +845,8 @@ footer {
     
         flex-basis: 100rem;
         flex-wrap: wrap;
+
+        margin-top: 15px;
     }
     
     .teacher-unit {
@@ -838,8 +858,8 @@ footer {
     }
     
     .teacher-icon-inner{
-        width: 400px;
-        height: 500px;
+        width: 300px;
+        height: 400px;
         border-radius: 20px;
     }
     
@@ -862,15 +882,10 @@ footer {
     
     .teach-button {
         margin-bottom: 30px;
+        margin-top: 0px;
     }
     
     .teacher_background{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 600px;
-        height: 600px;
-        position: absolute;
-        z-index: -4;
+        display: none;
     }
 }
