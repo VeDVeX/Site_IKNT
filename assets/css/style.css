@@ -476,13 +476,7 @@ footer {
 }
 
 /* PHONE FORMAT */
-@media screen and (max-width: 1000px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+@media screen and (max-width: 570px) {
 
     header {
         display: none;
@@ -493,7 +487,7 @@ footer {
     main {
         display: flex;
     
-        min-height: 100vh;
+        height: 100vh;
       
         /* background-color: aquamarine; */
         flex: 1;
