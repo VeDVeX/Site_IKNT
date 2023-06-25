@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">   
+
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets\scripts\script.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+    <link rel="stylesheet" href="assets/css/phone_style.css">
+    <link rel="stylesheet" href="assets/css/modal_style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <script src="assets\scripts\jquery-3.7.0.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="assets\scripts\main.js"></script>
+    <script src="assets\scripts\gallery.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
     <title>Сайт IT-института</title>
+    
 </head>
-<body>
+<body id="header123">
 
 
 <header>
-    <div class="logo-holder">
+    <a class="logo-holder" href="#header123">
         <img src="assets/images/logo.svg" alt="logo" class="logo">
-    </div>
-
-
+    </a>
     <nav>
         <div class="nav__bar">
             <a class="aaa" href="#bottom">об институте</a>
             <a class="aaa" href="#top">программы обучения</a>
             <a class="aaa" href="#teach">преподаватели</a>
-            <a class="aaa" href="http://www.psu.ru/fakultety/institut-kompyuternykh-nauk-i-tekhnologij">новости</a>
+            <a class="aaa" href="#gallery">галерея</a>
+            <a class="aaa" href="http://namaste.beget.tech/">новости</a>
         </div>
     </nav>
 </header>
 
 
 <main>
-    <section class="heading">
-        <div class="heading-subtitle">Пермский государственный национальный исследовательский университет</div>
-        <div class="heading-maintitle">институт компьютерных наук и технологий</div>
-        <div class="header_background"><img src="assets/images/header_background.png" alt="абвг" class="header-background-colored"></div>
+    <div class="heading" href="#bottom">
+        <div class="heading-subtitle"><span>Пермский государственный национальный исследовательский университет</span></div>
+        <div class="heading-maintitle"><span>институт компьютерных наук и технологий</span></div>
         <a class="heading-button" href="#bottom">Подробнее</a>
-    </section>
+    </div>
 </main>
+
+<!-- Блок информации об институте -->
 
 <section class="about-hs" id="bottom">
     <section class="hs-bar">
@@ -89,6 +100,7 @@
     </section>
 </section>
 
+<!-- Блок информации о направлениях вуза -->
 
 <section id="top" class="about-teach">
     <section class="teach-bar">
@@ -104,7 +116,10 @@
                 <input class="faq-input" type="radio" name="faq" id="faq_1">
                 <label class="faq-title" for="faq_1">02.03.01 (Прикладная математика и информатика)</label>
                 <div class="faq-text">
-                    <p class="faq-inner-text">При освоении профиля студенты получают возможность изучения уникальных курсов по теории управления, суперкомпьютерным технологиям, математическим моделям естествознания, изучают базовые принципы прикладной математики и информатики в применении к широчайшему кругу явлений, происходящих как в природе, так и в обществе.
+                    <p class="faq-inner-text">При освоении профиля студенты получают возможность изучения уникальных курсов по теории управления, 
+                        суперкомпьютерным технологиям, математическим моделям естествознания, 
+                        изучают базовые принципы прикладной математики и информатики в применении к широчайшему кругу явлений, 
+                        происходящих как в природе, так и в обществе.
                         Минимальный балл в 2022 году - 191 балл на бюджет.
                     </p>
                 </div>
@@ -114,13 +129,13 @@
                 <label class="faq-title" for="faq_2">02.03.02 (Фундаментальная информатика и информационные технологии)</label>
                 <div class="faq-text">
                     <p class="faq-inner-text">Выпускник получает фундаментальные знания в следующих областях:
-технологии разработки программных систем;
-информационная безопасность;
-суперкомпьютеры и параллельное программирование;
-интернет-технологии;
-локальные и глобальные вычислительные сети;
-разработка компьютерных игр;
-корпоративные системы управления базами данных.
+                        технологии разработки программных систем;
+                        информационная безопасность;
+                        суперкомпьютеры и параллельное программирование;
+                        интернет-технологии;
+                        локальные и глобальные вычислительные сети;
+                        разработка компьютерных игр;
+                        корпоративные системы управления базами данных.
                         Минимальный балл в 2022 году - 178 балл на бюджет.
                     </p>
                 </div>
@@ -140,49 +155,255 @@
         <section class="campaign-survay">
             <div class="survay-maintitle">Все еще думаете?</div>
             <div class="survay-subtitle">Пройдите опрос на определение программы</div>
-            <button class="heading-button">Пройти опрос</button>
+            <button class="heading-button faq-custum-button" id="open-modal-btn">Пройти опрос</button>
         </section>
+    </section>
+</section>
+
+<!-- Модальное окно опроса -->
+
+<div class="modal" id="my-modal">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+        <div class="quiz" id="quiz">
+
+            <div class="quiz-header" id="headerr">
+                <!-- Заголовок вопроса -->
+                <h2 class="title">Загружаем вопрос...</h2>
+    
+                <!-- Результат -->
+                <h2 class="title">%title%</h2>
+                <div class="summary">%message%</div>
+            </div>
+    
+            <ul class="ul_answers" id="listt">
+                <li>
+                    <label class="rad-label">
+                        <input type="radio" class="answer" name="answer" />
+                        <div class="rad-design"></div>
+                        <span class="rad-text">Ответ...</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="rad-label">
+                        <input type="radio" class="answer" name="answer" />
+                        <div class="rad-design"></div>
+                        <span class="rad-text">Ответ...</span>
+                    </label>
+                </li>
+            </ul>
+            <div class="buttons">
+            <button class="btn-hover color-1" id="btn-next">NEXT</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Блок-слайдер преподавателей -->
+
+<section class="slider-section" id="teach">
+    <section class="slider-bar">
+
+        <section class="slider-teachers-title">
+            <div class="slider-teachers-maintitle">Наш преподавательский состав</div>
+            <div class="slider-teachers-subtitle">Настоящие профессионалы</div>
+        </section>
+        
+        <div class="slider">
+            <div class="slide cur">
+                <button id="open-modal-btn-teach"><img src="assets/images/img1.jpg" alt="logo" class="slide-image"></button>
+                <div class="slider-title">
+                    <h1 class="slide-maintitle">1</h1>
+                    <h1 class="slide-subtitle">Position at work</h1>
+                </div>
+            </div>
+
+            <div class="slide cur">
+                <button id="open-modal-btn-teach-two"><img src="assets/images/img2.jpg" alt="logo" class="slide-image"></button>
+                <div class="slider-title">
+                    <h1 class="slide-maintitle">2</h1>
+                    <h1 class="slide-subtitle">Position at work</h1>
+                </div>
+            </div>
+
+            <div class="slide cur">
+                <button id="open-modal-btn-teach-three"><img src="assets/images/img3.jpg" alt="logo" class="slide-image"></button>
+                <div class="slider-title">
+                    <h1 class="slide-maintitle">3</h1>
+                    <h1 class="slide-subtitle">Position at work</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <button id="open-modal-btn-teach-four"><img src="assets/images/img4.jpg" alt="logo" class="slide-image"></button>
+                <div class="slider-title">
+                    <h1 class="slide-maintitle">4</h1>
+                    <h1 class="slide-subtitle">Position at work</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <button id="open-modal-btn-teach-five"><img src="assets/images/img5.jpg" alt="logo" class="slide-image"></button>
+                <div class="slider-title">
+                    <h1 class="slide-maintitle">5</h1>
+                    <h1 class="slide-subtitle">Position at work</h1>
+                </div>
+            </div>
+
+            <div class="slide">
+                <button id="open-modal-btn-teach-six"><img src="assets/images/img5.jpg" alt="logo" class="slide-image"></button>
+                <div class="slider-title">
+                    <h1 class="slide-maintitle">6</h1>
+                    <h1 class="slide-subtitle">Position at work</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-caps">
+            <div class="left-cap">
+                <div class="prev n">
+                    <img src="assets/images/slider_left_key.svg" alt="logo" class="slider-button">
+                </div>
+            </div>
+            <div class="right-cap">
+                <div class="next n">
+                    <img src="assets/images/slider_right_key.svg" alt="logo" class="slider-button">
+                </div>
+            </div>
+        </div>
+        
 
     </section>
 </section>
 
-<section class="about-teachers" id="teach">
-    <section class="teach-bar">
+<!-- Модальные окна преподавателей -->
 
-        <section class="teach-title">
-            <div class="teachers-maintitle">Наш преподавательский состав</div>
-            <div class="teachers-subtitle">Настоящие профессионалы</div>
+<div class="modal" id="my-modal-teach">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn-teach">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+
+        <div>ale</div>
+        <!-- Здесь писать информацию в модальном окне, дивы добавляй и пиши-->
+
+    </div>
+</div>
+
+<div class="modal" id="my-modal-teach-two">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn-teach-two">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+
+        <div>ale</div>
+        <!-- Здесь писать информацию в модальном окне, дивы добавляй и пиши-->
+
+    </div>
+</div>
+
+<div class="modal" id="my-modal-teach-three">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn-teach-three">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+
+        <div>ale</div>
+        <!-- Здесь писать информацию в модальном окне, дивы добавляй и пиши-->
+
+    </div>
+</div>
+
+<div class="modal" id="my-modal-teach-four">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn-teach-four">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+
+        <div>ale</div>
+        <!-- Здесь писать информацию в модальном окне, дивы добавляй и пиши-->
+
+    </div>
+</div>
+
+<div class="modal" id="my-modal-teach-five">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn-teach-five">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+
+        <div>ale</div>
+        <!-- Здесь писать информацию в модальном окне, дивы добавляй и пиши-->
+
+    </div>
+</div>
+
+<div class="modal" id="my-modal-teach-six">
+    <div class="modal__box">
+        <button class="modal__close-btn" id="close-my-modal-btn-teach-six">
+            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                    fill="#333333" />
+                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />
+            </svg>
+        </button>
+
+        <div>ale</div>
+        <!-- Здесь писать информацию в модальном окне, дивы добавляй и пиши-->
+
+    </div>
+</div>
+
+
+<section class = "gallery-section" id = "gallery">
+    <div class = "gallery-hub">
+        <section class="gallery-title">
+            <div class="gallery-maintitle">Галерея</div>
+            <div class="gallery-subtitle">Фотки</div>
         </section>
-        <section class="teachers-units">
-            <div class="teacher_background"><img src="assets/images/background_teachers.png" alt="абвг"></div>
-            <div class="teacher-unit">
-                <div class="teacher-icon"><img src="assets/images/gorodilov2.jpg" alt="logo" class="teacher-icon-inner"></div>
-                <div class="teacher-unit-titles">
-                    <div class="teacher-unit-maintitle">Городилов Алексей Юрьевич</div>
-                    <div class="teacher-unit-subtitle">Должность</div>
-                </div>
+        <section class = "galleryphotos">
+            <div class = "big">
+                <img src="assets/images/gallery/1.jpg" alt="Start">
             </div>
-
-            <div class="teacher-unit">
-                <div class="teacher-icon"><img src="assets/images/avtaikin2.jpg" alt="logo" class="teacher-icon-inner"></div>
-                <div class="teacher-unit-titles">
-                    <div class="teacher-unit-maintitle">Городилов Алексей Юрьевич</div>
-                    <div class="teacher-unit-subtitle">Должность</div>
-                </div>
+            <div class = "small">
+                <a href="assets/images/gallery/2.jpg"><img src="assets/images/gallery/2mini.jpg" alt="Миниатюра 1"></a>
+                <a href="assets/images/gallery/3.jpg"><img src="assets/images/gallery/3mini.jpg" alt="Миниатюра 1"></a>
+                <a href="assets/images/gallery/4.jpg"><img src="assets/images/gallery/4mini.jpg" alt="Миниатюра 1"></a>
+                <a href="assets/images/gallery/5.jpg"><img src="assets/images/gallery/5mini.jpg" alt="Миниатюра 1"></a>
+                <a href="assets/images/gallery/6.jpg"><img src="assets/images/gallery/6mini.jpg" alt="Миниатюра 1"></a>
+                <a href="assets/images/gallery/7.jpg"><img src="assets/images/gallery/7mini.jpg" alt="Миниатюра 1"></a>
+                <a href="assets/images/gallery/8.jpg"><img src="assets/images/gallery/8mini.jpg" alt="Миниатюра 1"></a>
             </div>
-
-            <div class="teacher-unit">
-                <div class="teacher-icon"><img src="assets/images/kuznecov2.jpg" alt="logo" class="teacher-icon-inner"></div>
-                <div class="teacher-unit-titles">
-                    <div class="teacher-unit-maintitle">Городилов Алексей Юрьевич</div>
-                    <div class="teacher-unit-subtitle">Должность</div>
-                </div>
-            </div>
-
         </section>
-        <button class="heading-button teach-button">Подробнее</button>
-    </section>
-
+        
+    </div>
+    
 </section>
 
 
@@ -194,5 +415,8 @@
     </div>
 </footer>
 
+
+<script src="assets\scripts\script.js"></script>
+<script src="assets\scripts\modal_script.js"></script>
 </body>
 </html>
