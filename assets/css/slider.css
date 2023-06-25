@@ -181,8 +181,8 @@
     align-items: center;
     position: absolute;
 
-    height: 600px;
-    width: 83%;
+    height: 38rem;
+    width: 99rem;
 }
 
 .left-cap {
@@ -191,7 +191,7 @@
     align-items: center;
     background-color: white;
     height: 105%;
-    width: 160px;
+    width: 175px;
     z-index: 5;
 }
 
@@ -201,7 +201,7 @@
     align-items: center;
     background-color: white;
     height: 105%;
-    width: 160px;
+    width: 175px;
     z-index: 5;
 }
 
