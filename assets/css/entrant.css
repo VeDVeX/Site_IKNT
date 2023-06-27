@@ -75,8 +75,15 @@
         padding-left: 50px;
     }
 
-    .nav__bar {
+    .aaa {
         display: none;
+        margin: 0 1rem;
+    }
+
+    .nws {
+        display: flex;
+        font-size: 20px;
+        margin-left: 3.5rem;
     }
     
     .entrant-item-text {
