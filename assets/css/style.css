@@ -178,8 +178,13 @@ main::after {
     font-weight: 700;
 }
 
+.heading-maintitle span{
+    transition: 1s;
+}
+
 .heading-maintitle span:hover {
     text-shadow: 0 0 5px white;
+    transition: .2s;
 }
 
 .heading-button {
