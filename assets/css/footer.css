@@ -18,6 +18,7 @@ footer {
     margin-left: 10%;
     text-align: end;
     margin-right: 2rem;
+    color: white;
 }
 
 .footer-logo {
@@ -29,4 +30,15 @@ footer {
 .footer-logo:hover {
     transform: scale(1.1);
     transition: .4s;
+}
+
+.footer-contacts {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    font-size: 1rem;
+    text-align: center;
+    margin-left: 15rem;
 }
