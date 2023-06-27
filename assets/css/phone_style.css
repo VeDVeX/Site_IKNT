@@ -147,13 +147,20 @@
     }
 
     .footer-copyrights-texts {
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin-left: 0;
         margin-right: 0rem;
+        max-width: 8rem;
+        margin-right: 0.5rem;
     }
     
     .footer-logo {
         max-width: 4rem;
         margin-left: 1rem;
+    }
+    
+    .footer-contacts {
+        font-size: 0.8rem;
+        margin-left: 5.5rem;
     }
 }
