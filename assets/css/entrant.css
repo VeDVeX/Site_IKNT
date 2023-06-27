@@ -54,7 +54,7 @@
 
 .entrant-item-text-subtitle {
     grid-template-rows: span 4;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0px 1rem;
     max-height: 100rem;
 }
