@@ -40,6 +40,7 @@
     grid-row: span 5;
     grid-template-columns: repeat(1, [row] 1fr);
     grid-template-rows: repeat(5, [row] 1fr);
+    margin-right: 2rem;
 }
 
 .entrant-item-text-maintitle {
@@ -158,9 +159,14 @@
     .entrant-item-text-maintitle {
         font-size: 1.2rem;
     }
+
     .entrant-item-text-subtitle {
+        font-size: 0.8rem;
 
-        font-size: 1rem;
+    }
 
+    .entrant-item-optionaly {
+        margin-top: 10rem;
+        margin-bottom: -10rem;
     }
 }
